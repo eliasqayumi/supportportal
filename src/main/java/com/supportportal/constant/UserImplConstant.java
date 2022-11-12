@@ -17,8 +17,8 @@ public class UserImplConstant {
     public static final String FIRSTNAME = "Admin";
     public static final String LASTNAME = "IT";
     public static final String USERNAME = "adminIt";
-    public static final String EMAIL = "elyasqayumi@gmail.com";
-    public static final String CONTACT = "05551415484";
+    public static final String EMAIL = "emlak.ofisi.deploy@gmail.com";
+    public static final String CONTACT = "05549885183";
     public static final Long AGENCY_ID = 1L;
     public static final String ROLE = "ROLE_SUPER_ADMIN";
     public static final boolean IS_ACTIVE = true;

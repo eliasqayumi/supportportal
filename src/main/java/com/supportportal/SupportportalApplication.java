@@ -76,7 +76,8 @@ public class SupportportalApplication {
         UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowCredentials(true);
-        corsConfiguration.setAllowedOrigins(Collections.singletonList("http://localhost:4200"));
+//        corsConfiguration.setAllowedOrigins(Collections.singletonList("http://localhost:4200"));
+        corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200","http://31.220.108.10/"));
         corsConfiguration.setAllowedHeaders(Arrays.asList("*", "**"));
         corsConfiguration.setExposedHeaders(
                 Arrays.asList("Origin", "Content-Type", "Accept", "Jwt-Token", "Authorization", "Access-Control-Allow-Headers",
