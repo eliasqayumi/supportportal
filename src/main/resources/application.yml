@@ -1,7 +1,7 @@
 jwt:
   secret: secret-1%32Turkiye!An!@$ISTas2#%SDT
 server:
-  port: 8080
+  port: 5000
 
 spring:
   datasource:
