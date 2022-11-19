@@ -46,13 +46,13 @@ public class HomeServiceImpl implements HomeService {
     }
 
     @Override
-    public Home insert(Long price, Long neighbourhoodId, Long typeId, Integer roomNumberId, Long currencyId, Long homeTypeId, String userId, Integer floorNumber, Integer totalFloor, String address, String details, Integer statusId,String header) {
+    public Home insert(String price, Long neighbourhoodId, Long typeId, Integer roomNumberId, Long currencyId, Long homeTypeId, String userId, Integer floorNumber, Integer totalFloor, String address, String details, Integer statusId,String header) {
         return this.homeRepository.save(createHome(null,price,neighbourhoodId,typeId,roomNumberId,currencyId,homeTypeId,userId,floorNumber,totalFloor,address,details,statusId,header));
     }
 
 
     @Override
-    public Home update(Long id,Long price, Long neighbourhoodId, Long typeId, Integer roomNumberId, Long currencyId, Long homeTypeId, String userId, Integer floorNumber, Integer totalFloor, String address, String details, Integer statusId,String header) {
+    public Home update(Long id,String price, Long neighbourhoodId, Long typeId, Integer roomNumberId, Long currencyId, Long homeTypeId, String userId, Integer floorNumber, Integer totalFloor, String address, String details, Integer statusId,String header) {
         Home currentHome=this.homeRepository.getById(id);
         Home home=createHome(id,price,neighbourhoodId,typeId,roomNumberId,currencyId,homeTypeId,userId,floorNumber,totalFloor,address,details,statusId,header);
         currentHome.setPrice(home.getPrice());
@@ -86,7 +86,7 @@ public class HomeServiceImpl implements HomeService {
         User user = this.userRepository.findUserByUserId(userId);
         return this.homeRepository.findAllByUser_Id(user.getId());
     }
-    private Home createHome(Long id,Long price, Long neighbourhoodId, Long typeId, Integer roomNumberId, Long currencyId, Long homeTypeId, String userId, Integer floorNumber, Integer totalFloor, String address, String details, Integer statusId,String header){
+    private Home createHome(Long id,String price, Long neighbourhoodId, Long typeId, Integer roomNumberId, Long currencyId, Long homeTypeId, String userId, Integer floorNumber, Integer totalFloor, String address, String details, Integer statusId,String header){
         Neighbourhood neighbourhood = this.neighbourhoodRepository.getById(neighbourhoodId);
         Type type = this.typeRepository.getById(typeId);
         RoomNumber roomNumber = this.roomNumberRepository.getById(roomNumberId);

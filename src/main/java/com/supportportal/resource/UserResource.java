@@ -76,7 +76,6 @@ public class UserResource extends ExceptionHandling {
 
     @PostMapping("/register")
     public ResponseEntity<User> register(@RequestBody User user) throws UserNotFoundException, UsernameExistException, EmailExistException, MessagingException, IOException, NotAnImageFileException {
-        System.out.println(user.getFirstName() + user.getLastName() + user.getUsername() + user.getEmail() + user.getContact() + user.getAgency());
         User newUser = userService.register(user.getFirstName(), user.getLastName(), user.getUsername(), user.getEmail(), user.getContact(), user.getAgency());
         return new ResponseEntity<>(newUser, OK);
     }

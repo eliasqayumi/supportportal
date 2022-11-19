@@ -8,6 +8,5 @@ import java.util.List;
 
 @Repository
 public interface HomeRepository extends JpaRepository<Home,Long> {
-    Home deleteHomeById(Long homeId);
     List<Home> findAllByUser_Id(Long userId);
 }

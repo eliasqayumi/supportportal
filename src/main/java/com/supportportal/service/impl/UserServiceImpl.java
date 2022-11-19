@@ -87,7 +87,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Override
     public User register(String firstName, String lastName, String username, String email, String contact, Agency agency) throws UserNotFoundException, UsernameExistException, EmailExistException, MessagingException, IOException, NotAnImageFileException {
         Agency defaultAgency = this.agencyService.getById(1L);
-        return configUser(EMPTY, firstName, lastName, username, email, null, defaultAgency.getId(), ROLE_USER.name(), true, true, null);
+        return configUser(EMPTY, firstName, lastName, username, email, contact, defaultAgency.getId(), ROLE_USER.name(), true, false, null);
     }
 
     @Override

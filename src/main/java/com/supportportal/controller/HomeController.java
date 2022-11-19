@@ -34,7 +34,7 @@ public class HomeController {
 
     @PostMapping
     public ResponseEntity<Home> insert(
-            @RequestParam("price") Long price, @RequestParam("neighbourhoodId") Long neighbourhoodId,
+            @RequestParam("price") String price, @RequestParam("neighbourhoodId") Long neighbourhoodId,
             @RequestParam("typeId") Long typeId, @RequestParam("roomNumberId") Integer roomNumberId,
             @RequestParam("currencyId") Long currencyId, @RequestParam("homeTypeId") Long homeTypeId,
             @RequestParam("userId") String userId, @RequestParam("floorNumber") Integer floorNumber,
@@ -50,7 +50,7 @@ public class HomeController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Home> update(
-            @PathVariable("id") Long homeId, @RequestParam("price") Long price,
+            @PathVariable("id") Long homeId, @RequestParam("price") String price,
             @RequestParam("neighbourhoodId") Long neighbourhoodId, @RequestParam("typeId") Long typeId,
             @RequestParam("roomNumberId") Integer roomNumberId, @RequestParam("currencyId") Long currencyId,
             @RequestParam("homeTypeId") Long homeTypeId, @RequestParam("userId") String userId,

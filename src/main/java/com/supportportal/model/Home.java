@@ -22,7 +22,7 @@ public class Home {
     private Long id;
 
     @Column(name = "price", nullable = false)
-    private Long price;
+    private String price;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "neighbourhood_id", nullable = false)
