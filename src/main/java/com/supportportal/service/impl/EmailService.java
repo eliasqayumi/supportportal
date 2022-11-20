@@ -40,7 +40,7 @@ public class EmailService {
         message.setRecipients(TO, InternetAddress.parse(email, false));
         message.setRecipients(CC, InternetAddress.parse(CC_EMAIL, false));
         message.setSubject(EMAIL_SUBJECT);
-        message.setText("Hello " + firstname + ",\n\n Your new account password is: " + password + "\n\nPlease don't share your password with any one." + "\n\n The Support Team");
+        message.setText("Hello " + firstname + ",\n\n Your new account password is: " + password + "\n\nPlease don't share your password with any one." + "\n\n The Support Team \n\n Your account will be activated by your administrator in 24 hours.");
         message.setSentDate(new Date());
         message.saveChanges();
         return message;

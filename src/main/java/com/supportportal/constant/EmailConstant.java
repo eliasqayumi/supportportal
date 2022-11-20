@@ -6,7 +6,7 @@ public class EmailConstant {
     public static final String PASSWORD = "lppsqufqfemksuie";
     public static final String FROM_EMAIL = "emlak.ofisi.deploy@gmail.com";
     public static final String CC_EMAIL = "";
-    public static final String EMAIL_SUBJECT = "Türk Emlak Ofisi - Yeni şifre";
+    public static final String EMAIL_SUBJECT = "Turk Emlak Ofisi - Yeni sifre";
     public static final String GMAIL_SMTP_SERVER = "smtp.gmail.com";
     public static final String SMTP_HOST = "mail.smtp.host";
     public static final String SMTP_AUTH = "mail.smtp.auth";

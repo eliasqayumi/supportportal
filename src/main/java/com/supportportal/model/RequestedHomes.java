@@ -30,7 +30,11 @@ public class RequestedHomes {
     private String location;
 
     @Column(name = "budget",nullable = false)
-    private Long budget;
+    private String budget;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "currency_id", nullable = false)
+    private Currency currency;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "room_number_id", nullable = false)

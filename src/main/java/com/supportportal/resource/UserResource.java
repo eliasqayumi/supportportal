@@ -89,7 +89,6 @@ public class UserResource extends ExceptionHandling {
             @RequestParam("isNonLocked") String isNonLocked, @RequestParam(value = "profileImage", required = false) MultipartFile profileImage
     ) throws UserNotFoundException, EmailExistException, MessagingException, IOException, UsernameExistException, NotAnImageFileException {
 
-        System.out.println("-----" + firstName + "-----" + lastName + "-----" + username + "-----" + email + "-----" + role + "-----" + isActive + "-----" + contact + "-----" + agencyId + "-----" + isNonLocked + "-----" + profileImage);
         Long value = Long.valueOf(agencyId);
         User newUser = this.userService.addNewUser(firstName, lastName, username, email, contact, value, role,
                 Boolean.parseBoolean(isNonLocked), Boolean.parseBoolean(isActive), profileImage);

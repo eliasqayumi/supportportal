@@ -31,25 +31,23 @@ public class RequestedHomesController {
     @PostMapping
     public ResponseEntity<RequestedHomes> insert(
             @RequestParam("recipientsName") String recipientsName, @RequestParam("priorityId") String priorityId,
-            @RequestParam("location") String location, @RequestParam("budget") String budget,
+            @RequestParam("location") String location, @RequestParam("budget") String budget, @RequestParam("currencyId") String currencyId,
             @RequestParam("roomNumberId") String roomNumberId, @RequestParam("statusId") String statusId,
             @RequestParam("floors") String floors, @RequestParam("userId") String userId,
             @RequestParam("note") String note
     ) {
-        System.out.println(recipientsName+"********"+priorityId+"********"+location+"********"+budget+"********"+roomNumberId+"********"+statusId+"********"+floors+"********"+userId+"********"+note);
-        return new ResponseEntity<>(this.RequestedHomesService.insert(recipientsName, priorityId, location, budget, roomNumberId, statusId, floors, userId, note), HttpStatus.CREATED);
+        return new ResponseEntity<>(this.RequestedHomesService.insert(recipientsName, priorityId, location, budget,currencyId, roomNumberId, statusId, floors, userId, note), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<RequestedHomes> update(
             @PathVariable("id") Long requestedHomesId, @RequestParam("recipientsName") String recipientsName,
             @RequestParam("priorityId") String priorityId, @RequestParam("location") String location,
-            @RequestParam("budget") String budget, @RequestParam("roomNumberId") String roomNumberId,
+            @RequestParam("budget") String budget,@RequestParam("currencyId") String currencyId, @RequestParam("roomNumberId") String roomNumberId,
             @RequestParam("statusId") String statusId, @RequestParam("floors") String floors,
             @RequestParam("userId") String userId, @RequestParam("note") String note
     ) {
-        System.out.println(recipientsName + " **** " + priorityId + " **** " + location + " **** " + budget + " **** " + roomNumberId + " **** " + statusId + " **** " + floors + " **** " + userId + "****" + note);
-        return new ResponseEntity<>(this.RequestedHomesService.update(requestedHomesId, recipientsName, priorityId, location, budget, roomNumberId, statusId, floors, userId, note), HttpStatus.OK);
+        return new ResponseEntity<>(this.RequestedHomesService.update(requestedHomesId, recipientsName, priorityId, location, budget,currencyId, roomNumberId, statusId, floors, userId, note), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
