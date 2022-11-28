@@ -3,7 +3,7 @@ package com.supportportal.constant;
 public class EmailConstant {
     public static final String SIMPLE_MAIL_TRANSFER_PROTOCOL = "smtps";
     public static final String USERNAME = "emlak.ofisi.deploy@gmail.com";
-    public static final String PASSWORD = "lppsqufqfemksuie";
+    public static final String PASSWORD = "arntxccmbcdbfhwi";
     public static final String FROM_EMAIL = "emlak.ofisi.deploy@gmail.com";
     public static final String CC_EMAIL = "";
     public static final String EMAIL_SUBJECT = "Turk Emlak Ofisi - Yeni sifre";
